@@ -1,0 +1,39 @@
+[
+    {
+        "precio": 50,
+        "id": 1,
+        "title": "Times",
+        "imagen": "./img/times0.jpg"
+    },
+    {
+        "precio": 70,
+        "id": 2,
+        "title": "Goleiros",
+        "imagen": "./img/goleiros0.jpg"
+    },
+    {
+        "precio": 600,
+        "id": 3,
+        "title": "Traves",
+        "imagen": "./img/traves0.jpg"
+    },
+    {
+        "precio": 60,
+        "id": 4,
+        "title": "Palhetas",
+        "imagen": "./img/palhetas0.jpg"
+    },
+    {
+        "precio": 30,
+        "id": 5,
+        "title": "Bolinhas",
+        "imagen": "./img/bolinhas0.jpg"
+    },
+    {
+        "precio": 20,
+        "id": 6,
+        "title": "Pins",
+        "imagen": "./img/pins0.jpg"
+    }
+]
+
