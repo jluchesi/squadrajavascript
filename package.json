@@ -1,0 +1,24 @@
+{
+  "name": "projeto-squadra-acrilica",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "purgecss": "^4.0.3"
+  },
+  "scripts": {
+    "limpiacss": "purgecss --css ./css/custom.css --content *.html --output ./csspurge/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jluchesi/squadra-acrilica.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jluchesi/squadra-acrilica/issues"
+  },
+  "homepage": "https://github.com/jluchesi/squadra-acrilica#readme"
+}
