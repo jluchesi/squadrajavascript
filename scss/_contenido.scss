@@ -1,0 +1,76 @@
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.contenido{
+    display: inline-block;
+    flex-direction: column;
+    
+    justify-content: center;
+    padding: 20px 40px;
+    width: 100%;
+    height: auto;
+    background-color: #ffffff;
+}
+
+.redes{
+    a {
+        color: white;
+        list-style: none;
+        text-decoration: none;
+    }
+    &:hover {color: $link-hover-color;}
+}
+
+.estiloredes{
+    list-style: none;
+}
+
+.menuprincipal{
+  
+    a{
+        color: $secondary;
+        display: block;
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        list-style: none;
+    }
+    &:hover {
+        color: $primary;
+        transition: 3s;
+        } 
+
+    &:visited{
+        color: $secondary; 
+        text-decoration: none;
+    }
+    
+}
+
+.bgc-claro{
+    background-color: #f2f5fa;
+}
+
+
+.color{
+    a {
+        color: $secondary;
+        text-decoration: none;
+        font-weight:bolder;
+       
+        
+    }
+    &:hover {
+        color: $linkredes;
+        opacity: 0.6;
+        transition: 1s;
+        
+        } 
+
+}
+
+.fuentecontato{
+    font-size: 16px;
+}
+
