@@ -108,9 +108,29 @@
     </header>
      <main>
        <div class="container">
-         <h2>Compre seus produtos</h2>
-         <hr>
-         <div class="row" id="items"></div>
+         <h3 class="my-3 text-secondary">Compre seus produtos</h3>
+         <h5 id="bemvindo" class="my-3"></h5>
+         <h4 id="parrafo" class="text-center text-info" style="display: none">Obrigado por adicionar un produto.</h4>
+  
+         <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Produto</th>
+              <th scope="col">Quantidade</th>
+              <th scope="col">Adicionar/Retirar</th>
+              <th scope="col">Total</th>
+            </tr>
+          </thead>
+          <tbody id="items"></tbody>
+          <tfoot>
+            <tr id="footer">
+              <th scope="row" colspan="5">Carrinho vazio. Inicie sua compra</th>
+            </tr>
+          </tfoot>
+          </table>
+          
+            <div class="row" id="cards"></div>
        </div>
      </main>
 
@@ -185,34 +205,36 @@
           <div class="card-body">
             <h5>Titulo</h5>
             <p>preço</p>
-            <button class="btn btn-dark">Comprar</button>
+            <button class="btn btn-dark" id="bot">Comprar</button>
           </div>
         </div>
       </div>
 </template>
 
 
-<template id="template-carrinho">
+<template id="template-carrito">
   <tr>
     <th scope="row">id</th>
     <td>Times</td>
     <td>1</td>
+    <td>
       <button class="btn btn-info btn-sm">
-        +
+          +
       </button>
       <button class="btn btn-danger btn-sm">
-        -
+          -
       </button>
+  </td>
     <td>R$ <span>50</span></td>
   <tr>
 </template>
 
 
 <template id="template-footer">
-  <th scope="2" colspan="2">Total produtos</th>
+  <th scope="row" colspan="2">Total produtos</th>
   <td>10</td>
   <td>
-      <button class="btn btn-danger btn-sm" id="esvaziar-carrito">
+      <button class="btn btn-danger btn-sm" id="vaciar-carrito">
         Esvaziar carrinho
       </button>
   </td>
@@ -223,10 +245,13 @@
 
 
       <!-- SCRIPT -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
     <script src="./dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     <!-- <script src="./js/anima.js"></script> -->
     <script src="./js/store.js"></script>
   
+
   </body>
 </html>
 
