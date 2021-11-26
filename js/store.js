@@ -1,5 +1,3 @@
-let nombre = prompt("Quál é o seu nome?")
-
 const cards = document.getElementById('cards')
 const items = document.getElementById('items')
 const footer = document.getElementById('footer')
@@ -100,7 +98,25 @@ const pintarCarrito = () => {
 
     localStorage.setItem('carrito', JSON.stringify(carrito))
 }
-
+// BOTON COMPRAR
+function confirmarCompra() {
+ 
+    Swal.fire({
+        title: '¿Desea confirmar a compra?',
+        showDenyButton: true,
+        confirmButtonText: 'Confirmar',
+        denyButtonText: `Cancelar`,
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire('¡Parabens pela compra!', '', 'success')
+            productosEnCarrito = [];
+            actualizarCarritoHTML();
+        } else if (result.isDenied) {
+            Swal.fire('Compra cancelada', '', 'info')
+        }
+    })
+}
+// BOTON COMPRAR
 
 const pintarFooter = () => {
     footer.innerHTML = ''
@@ -127,7 +143,18 @@ const pintarFooter = () => {
         carrito = {}
         pintarCarrito()
     })
+    const btnComprar = document.getElementById('finalizar_compra')
+    btnComprar.addEventListener('click', () => {
+        carrito = {}
+        pintarCarrito()
+        confirmarCompra()
+        
+    })
 }
+
+
+
+
 //Aumentar y disminuir productos
 const btnAccion = e =>{
     if (e.target.classList.contains('btn-info')){
@@ -151,7 +178,3 @@ const btnAccion = e =>{
     }
     e.stopPropagation()
 }
-
-
-    $("#bemvindo").append(`<p>Bom día ${nombre}. Sintase como em casa e faça suas compras.</p>`)
-
